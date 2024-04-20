@@ -95,10 +95,6 @@ const builder = builderSchema(BUILDER_NAME, {
 			description: 'The builder store used to create the select label.',
 		},
 		{
-			name: 'separator',
-			description: 'The builder store used to create the select separator.',
-		},
-		{
 			name: 'group',
 			description: 'The builder store used to create the select group.',
 		},
@@ -235,16 +231,6 @@ const arrow = elementSchema('arrow', {
 	],
 });
 
-const separator = elementSchema('separator', {
-	description: 'An optional separator element',
-	dataAttributes: [
-		{
-			name: 'data-melt-select-separator',
-			value: ATTRS.MELT('separator'),
-		},
-	],
-});
-
 const group = elementSchema('group', {
 	description: 'A function which takes in a unique key to group options together.',
 	props: [
@@ -314,7 +300,6 @@ const schemas = [
 	option,
 	group,
 	groupLabel,
-	separator,
 	arrow,
 	hiddenInput,
 ];
